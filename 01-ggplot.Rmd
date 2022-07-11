@@ -1,0 +1,52 @@
+# {ggplot}
+
+All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
+
+## Break Legend Into Multiple Lines
+
+You can use the `guides()` function to split your legend into multiple rows (`nrow` argument)
+
+```{r }
+library(survminer)
+library(survival)
+packageVersion("survminer")
+packageVersion("survival")
+```
+
+```{r }
+fit <- survfit(Surv(time, status) ~ ph.ecog, data = lung)
+
+ggsurvplot(fit, data = lung) +
+  guides(color = guide_legend(nrow = 2))
+
+```
+
+## Change Title of Legend
+
+Change the title of any legend (e.g. fill, color, alpha) with `labs()`
+
+```{r}
+library(ggplot2)
+packageVersion("ggplot2")
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species,
+                 alpha = Sepal.Width)) +
+  geom_point() +
+  labs(color = "Flower Species", 
+       alpha = "Width of Sepal")
+
+
+```
+
+## Rotate X Axis 90 Degrees
+
+```{r}
+library(ggplot2)
+packageVersion("ggplot2")
+
+q <- ggplot(iris, aes(Species, Sepal.Width, fill = Species)) +
+  geom_boxplot() 
+
+q + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+

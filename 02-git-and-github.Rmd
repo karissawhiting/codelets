@@ -1,0 +1,17 @@
+# Git & Github
+
+Mostly terminal commands that are helpful for version control
+
+## Add an Upstream Repository
+
+```{bash, eval = FALSE}
+git remote add upstream https://github.com/<owner-of-upstream>/<upstream-repo>.git
+```
+
+## Configure Your Credentials
+
+```{bash, eval = FALSE}
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+```
+

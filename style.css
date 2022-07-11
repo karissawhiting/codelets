@@ -1,0 +1,132 @@
+/*----Code -------*/
+
+p.caption {
+  color: #777;
+  margin-top: 0px;
+}
+
+p code {
+  white-space: inherit;
+  font-size: 10px
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre>code {
+  white-space: inherit;
+  font-size: 11px;
+}
+
+.summary > li:first-child {
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.sourceCode pre {
+  margin: 0 !important; /* makes space above and below symmetrical*/
+  line-height: 1
+}
+
+.sourceCode {
+  margin-bottom: .2em; /* adds same amount of margin as a <p> would */
+  line-height: 1
+}
+
+.book .book-summary ul.summary li.divider {
+    height: 0px;
+}
+
+.book.font-family-1 {
+  font-family: 'Muli', sans-serif;
+}
+
+/*----Chapter Title-------*/
+
+.title {
+  font-size: 3em !important;
+  color: #426AE0 !important;
+ }
+ 
+.book .book-body .page-wrapper .page-inner section.normal h1 {
+  color: #544fd1 !important;
+  margin-bottom: .1em !important;
+  margin-top: .1em !important;
+
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p {
+  margin-bottom: .1em !important;
+  margin-top: .1em !important;
+}
+
+
+h2, h3, h4 {
+  color: #DD517F;
+  font-size: 1.5em !important;
+
+}
+
+.subtitle {
+  font-family: 'Prata', serif;
+  color: #976393;
+}
+
+.body {
+  font-size: .8em !important;
+}
+
+/*-----Body Links-------*/
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+  color: #43457f;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a:hover {
+color: #43457f; /* darker color when hovering */
+text-decoration: none;
+}
+
+/*------------ TOC --------------*/
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #1a338c;
+}
+
+.summary a:hover {
+  color: #4940DA; !important;
+} 
+
+
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #94167F; !important;
+  border-left: solid 4px;
+  border-color: #F9AC53;
+  padding-left: 15px !important;
+}  
+
+li.appendix span, li.part span { /* for TOC part names */
+  margin-top: 1em;
+  color: #FFD286 !important;
+  opacity: 1 !important;
+  text-transform: uppercase;
+}
+
+.book .book-summary {
+  
+  background: linear-gradient(#53b6fc 1%, #94C9F9, #D5C9EF 70%, #DD517F);
+  border-right: none;
+}
+
+.book .book-header .btn {
+  color: #6147f5; !important;
+}
+

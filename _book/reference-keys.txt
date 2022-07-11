@@ -1,0 +1,10 @@
+about
+usage
+ggplot
+break-legend-into-multiple-lines
+change-title-of-legend
+git-github
+add-an-upstream-repository
+configure-your-credentials
+data-cleaning
+excel-numeric-dates-mixed-with-character

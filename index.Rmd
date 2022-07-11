@@ -1,0 +1,31 @@
+--- 
+title: "Codelets"
+author: "Karissa Whiting"
+date: "Updated: `r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+url: https://www.karissawhiting.com/codelets
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+```{r setup}
+knitr::opts_chunk$set(
+  message = FALSE, warning = FALSE
+)
+```
+
+
+# About
+
+This is an encyclopedia of useful R code snippets (a.k.a. "codelets"), written in **Markdown**. 
+
+## Usage 
+
+This is meant to be an easily accessible reference guide for all the bits of code I can never remember. Chapters most often will contain several snippets each are organized by usage (e.g. [Data Cleaning]) or package (e.g. [{ggplot}]). All code examples should be reprex. 

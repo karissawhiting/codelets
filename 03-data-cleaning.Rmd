@@ -1,0 +1,32 @@
+# Data Cleaning
+
+## Excel Numeric Dates Mixed With Character
+
+Sometimes columns may be read in with both excel numeric dates and character dates by default. This code looks for a forward slash to distinguish which is which and converts accordingly. This may not work for all data formats but catches most cases I come across.   
+
+```{r}
+
+library(tidyverse)
+library(lubridate)
+
+data <- tibble::tribble(
+  ~id, ~messy_date,
+  1L,     "43381",
+  2L,     "43699",
+  3L,     "43665",
+  4L,     "43827",
+  5L,     "43911",
+  6L, "5/10/2019",
+  7L,     "44037",
+  8L,     "44151",
+  9L,     "44105"
+)
+
+data %>%
+  dplyr::mutate(clean_date = 
+           case_when(
+             str_detect(messy_date, fixed('/')) ~ mdy(messy_date), 
+             TRUE ~ janitor::excel_numeric_to_date(as.numeric(messy_date))))
+
+```
+
